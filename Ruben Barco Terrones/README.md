@@ -16,6 +16,12 @@ All the scripts are coded in Python and tested and debugged using Spyder (Anacon
 The repository is organized in the following way: 
 
 * **Dockerfiles**: the two dockerfiles coded for runing the experiments on the server:
-  * hola
-* **Preprocessing**: all the scripts coded for organizing the IEMOCAP database, for the preprocessing of audio, features and video and for creating all the .txt, .csv and dictionaries for the training process.
-* **Emotion Recognition**: all the training scripts for the Emotion Recognition system used in the master thesis.
+  * The first Dockerfile contains the needed libraries for running the experiments with *Keras* over *Tensorflow* with gpu. We had to add also the *vgg* library and the libraries to load the files (*Pandas*, *Scipy*, *Pillow*)
+  * The second Dockerfile contains the libraries for the face alignment process. It contains the corresponding lines to install *OpenCV* and *PyTorch*.
+* **Preprocessing**: all the scripts coded for organizing the IEMOCAP database, for the preprocessing of audio, handcraft features and video and for creating all the .txt, .csv and dictionaries for the training process. There are some common files used for all the database in general. This forlder is subdivided in three folders:
+  * **Audio Features**: preprocessing files for the handcraft audio fetures. 
+  * **Raw Audio**: preprocessing files for the rau audio segments of 66-100ms.
+  * **Video**: preprocessing files for the obtention of the cropped and alligned faces from the videos.
+* **Emotion Recognition**: all the training scripts for the Emotion Recognition system used in the master thesis. This forder is subdivided in two subfolders: **Local-Utterance Level** for the frame level analysis and **RNNs** for the analysis with temporal information. Both strategies follow the same organization of files:
+  * The file created for the training.
+  * The same file but ended in ´hola´
