@@ -17,7 +17,7 @@ Study of the state-of-the-art of the emotion recognition problem using audiovisu
 
 Contributions
 
-## Andreu Masdue Ninot
+## Andreu Masdeu Ninot
 ### Multitask Learning for Facial Attributes Analysis
 
 Contributions
