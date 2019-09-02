@@ -20,4 +20,9 @@ Contributions
 ## Andreu Masdeu Ninot
 ### Multitask Learning for Facial Attributes Analysis
 
-Contributions
+In this thesis we explore the use of Multitask Learning for improving performance in facial attributes tasks such as gender, age and ethnicity prediction. These tasks, along with emotion recognition will be part of a new dyadic interaction dataset which was recorded during the development of this thesis. This work includes the implementation of two state of the art multitask deep learning models and the discussion of the results obtained from these methods in a preliminary dataset, as well as a first evaluation in a sample of the dyadic interaction dataset. This will serve as a baseline for a future implementation of Multitask Learning methods in the fully annotated dyadic interaction dataset.
+
+The contribution of this master thesis within the whole project is the study of the state of the art in multitask deep learning, specially for face attributes analysis. Training and analysis of two state of the art multitask learning architectures on an external dataset and a cross-database evaluation of these trained models in the Dyadic Interaction Dataset. Comparision between multitask learning models and with single-task learning models. Help and participation during the recordings of the different sessions of the Face-to-face Dyadic Interaction Dataset placing and collecting the setup and attending the participants. Also collaboration in the annotation of this database labelling the
+emotions of the participants.
+
+In the MultitaskLearning folder you can find the implementation of all models in the buildings subfolder, scripts for training the models in the train subfolder and notebooks to analyze the results in the analysis subfolder.
