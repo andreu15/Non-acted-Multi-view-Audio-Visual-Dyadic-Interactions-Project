@@ -17,7 +17,7 @@ The repository is organized in the following way, in three folders:
 
 * **train**: Here are all scripts coded to train all possible configurations of the MTL models. The Baseline Model is trained in the Cross-stitch networks scripts. There are 16 files, since each file contains a different grouping of the tasks (4 different groupings: 3 pairs and the triplet) and also each file is doubled for the backwards and normal approach.
 
-  * **analysis**: Here there are different notebooks for analysing the results obtained during training. 'Create UTK Results Table.ipynb' creates the tables containing all performance metrics in each task and for each configuration. 'Create Dyadic Results Table.ipynb' does the same but for the dyadic dataset. CreateDataset.ipynb generates the dyadic dataset from the raw videos and ClassActivationMap.ipynb allows to visualize CAM's from images of the UTKFace dataset. Finally 'Analyse Results Table.ipynb' and 'Analyse Results Table-Dyadic.ipynb' generate the figures shown in the Results section from the results table.
+* **analysis**: Here there are different notebooks for analysing the results obtained during training. 'Create UTK Results Table.ipynb' creates the tables containing all performance metrics in each task and for each configuration. 'Create Dyadic Results Table.ipynb' does the same but for the dyadic dataset. CreateDataset.ipynb generates the dyadic dataset from the raw videos and ClassActivationMap.ipynb allows to visualize CAM's from images of the UTKFace dataset. Finally 'Analyse Results Table.ipynb' and 'Analyse Results Table-Dyadic.ipynb' generate the figures shown in the Results section from the results table.
 
 
 
