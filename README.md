@@ -1,11 +1,26 @@
 # Non-acted Multi-view Audio-Visual Dyadic Interactions Project
-This repository contains all code generated during the development of the master thesis Non-acted Multi-view Audio-Visual Dyadic Interactions Project during the spring semester of the Master in Foundations of Data Science 2018/2019. By Aleix Casellas, Andreu Masdeu, Pablo Lázaro and Rubén Barco.
+This repository contains all code generated during the development of the master thesis Non-acted Multi-view Audio-Visual Dyadic Interactions Project during the spring semester of the Master in Foundations of Data Science 2018/2019. By Aleix Casellas, Andreu Masdeu, Pablo Lázaro and Rubén Barco. 
+
+#### Description of the project
+
+Socially-intelligent systems have to be capable of accurately perceiving and inferring the personality and other particularities of different individuals, so as to provide a more effective, empathic, and natural tailored communication. To embody this human likeness into such systems, it is imperative to have a deeper understanding of real human-human interactions first, to computationally model both individual behavior and interpersonal interinfluence. However, there is a lack of publicly-available audiovisual databases of non-acted face-to-face dyadic interactions, which cover the richness and complexity of social communications in real life.
+In this project, we collected the first of its kind non-acted audio-vidual multi-view dataset of dyadic interactions. The main goals of this dataset and associated research is to analyze human communication from a multidisciplinary perspective (i.e. technological, sociological and psychological) and to research and implement new paradigms and technologies of interpersonal behavior understanding. It is expected to move beyond automatic individual behavior detection and focus on the development of automatic approaches to study and understand the mechanisms of perception of and adaptation to verbal and non-verbal social signals in dyadic interactions, taking into account individual and dyad characteristics.
+
+In addition to the collection of more than 80 hours of dyadic interactions including 150 participants performing cognitive tasks designed by the psychologists, this project performed a proof of concept analysis of different technical challenges included in the database: 
+
+* Setup design, calibration and synchronization of 6 HD cameras, 2 HD egocentric cameras, 2 wrist heart rate monitors, 2 lapel microphones and 1 ambient microphone
+* Multi-view joint optimization of hand and body skeleton poses for enhanced hand and body pose recovery
+* Speaker audio segmentation
+* Audio-visual spatio-temporal modeling of human emotions
+* Multi-task face attributes analysis
+
+The different contributions are presented below and justified in the context of their respective state-of-the-art, evaluated on proper public datasets, and finally tested as a proof of concept evaluation on the recently designed dyadic dataset.
 
 
 ## Pablo Lázaro Herrasti
 ### Multi-modal Local Non-verbal Emotion Recognition in Dyadic scenarios and Speaker Segmentation
 
-Study of the state-of-the-art of the emotion recognition problem using audiovisual sources. Deliver a emotion recognition system using Deep Learning techniques based on unimodal audio features, raw audio and faces, and their possible fusion. On the other hand, study of state-of-the-art of the speaker segmentation problem using audio sources and unsupervised learning techniques such as **Spectral Clustering**. Help and participate during the recordings of the different sessions of the **Face-to-face Dyadic Interaction Dataset}** placing and collecting the setup and attending the participants. Also annotate this database labeling the utterances of the videos.
+Study of the state-of-the-art of the emotion recognition problem using audiovisual sources. Deliver a emotion recognition system using Deep Learning techniques based on unimodal audio features, raw audio and faces, and their possible fusion. On the other hand, study of state-of-the-art of the speaker segmentation problem using audio sources and unsupervised learning techniques such as **Spectral Clustering**. Help and participate during the recordings of the different sessions of the **Face-to-face Dyadic Interaction Dataset** placing and collecting the setup and attending the participants. Also annotate this database labeling the utterances of the videos.
 
 ## Rubén Barco Terrones
 ### Multi-modal Local and Recurrent Non-verbal Emotion Recognition in Dyadic Scenarios
