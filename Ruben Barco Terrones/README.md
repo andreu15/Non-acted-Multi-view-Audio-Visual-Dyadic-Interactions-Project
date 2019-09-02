@@ -22,6 +22,6 @@ The repository is organized in the following way:
   * **Audio Features**: preprocessing files for the handcraft audio fetures. 
   * **Raw Audio**: preprocessing files for the rau audio segments of 66-100ms.
   * **Video**: preprocessing files for the obtention of the cropped and alligned faces from the videos.
-* **Emotion Recognition**: all the training scripts for the Emotion Recognition system used in the master thesis. This forder is subdivided in two subfolders: **Local-Utterance Level** for the frame level analysis and **RNNs** for the analysis with temporal information. Both strategies follow the same organization of files:
-  * The file created for the training.
-  * The same file but ended in ´hola´
+* **Emotion Recognition**: all the training scripts for the Emotion Recognition system used in the master thesis. This forder is subdivided in two subfolders: **Local-Utterance Level** for the frame level analysis and **RNNs** for the analysis with temporal information. Both folders are again subdivided in 4 subfolders: **Audio Features**, **Fusion** (with all the codes for the bimoadl and trimodal fusion), **Raw Audio** and **Video**. All these strategies follow the same organization of files:
+  * A file coded with the generator and all the needed lines for training the models.
+  * The same file but ended in `hola`
