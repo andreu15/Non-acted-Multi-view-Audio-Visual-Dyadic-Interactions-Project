@@ -13,7 +13,7 @@ Codes for implementation and experiments are done in Jupyter notebook. All the f
 
 The repository is organized in the following way: 
 
-* **\frames_experiments**: In this folder one can find the files obtained using OpenPose with the estimation of the keypoints used for the notebooks. There are also the images that correspond to the frames used. They are organized in 5 subjects, each of whom has four folders inside corresponding to the frames of each camera used. Inside these last folders, there are the keypoints founded with OpenPose and the Ground Truth manually annotated.
+* **frames_experiments**: In this folder one can find the files obtained using OpenPose with the estimation of the keypoints used for the notebooks. There are also the images that correspond to the frames used. They are organized in 5 subjects, each of whom has four folders inside corresponding to the frames of each camera used. Inside these last folders, there are the keypoints founded with OpenPose and the Ground Truth manually annotated.
 
 * **3D_reconstruction_video.ipynb**: This notebook makes the 3D reconstruction of the points using the method we considered the best, displaying it into the screen. The velocity of the frames shown is not the real one.
 
