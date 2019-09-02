@@ -4,20 +4,24 @@ This folder contains the repository of the master thesis of **Aleix Casellas Com
 
 ### Description of the Master Thesis
 
-In this thesis we explore the use of Multitask Learning for improving performance in facial attributes tasks such as gender, age and ethnicity prediction. These tasks, along with emotion recognition will be part of a new dyadic interaction dataset which was recorded during the development of this thesis. This work includes the implementation of two state of the art multitask deep learning models and the discussion of the results obtained from these methods in a preliminary dataset, as well as a first evaluation in a sample of the dyadic interaction dataset. This will serve as a baseline for a future implementation of Multitask Learning methods in the fully annotated dyadic interaction dataset.
+In this thesis we explore the Human Pose recovery in multi-view dyadic interactions. The method uses computes the 2D keypoint estimation using OpenPose and then use multiple view geometry in order to project the points to 3D. This works includes the implementation of this projection to the 3D space, as well as the reprojection to 2D in order to see how good are the estimations and refine the points. 
  
 
 ### Repository Explanation
 
-Codes for implementation and training of models are Python scripts. For analysing results jupyter notebook were created instead.
+Codes for implementation and experiments are done in Jupyter notebook. All the files used are in the folder frames_experiments.
 
-The repository is organized in the following way, in three folders: 
+The repository is organized in the following way: 
 
-* **implementations**: Here you can find the implementations for building the Hard Parameter Sharing Models and for building the Cross-stitch Networks. To build a Cross-stitch Network a custom Keras layer for the cross-stitch operation is necessary and is implemented in a class called ProportionalAddition inside the leaky_unit.py file. This file is named after another multitask learning unit named leaky_unit who was finally not included in the thesis.
+* **\frames_experiments**: In this folder one can find the files obtained using OpenPose with the estimation of the keypoints used for the notebooks. There are also the images that correspond to the frames used. They are organized in 5 subjects, each of whom has four folders inside corresponding to the frames of each camera used. Inside these last folders, there are the keypoints founded with OpenPose and the Ground Truth manually annotated.
 
-* **train**: Here are all scripts coded to train all possible configurations of the MTL models. The Baseline Model is trained in the Cross-stitch networks scripts. There are 16 files, since each file contains a different grouping of the tasks (4 different groupings: 3 pairs and the triplet) and also each file is doubled for the backwards and normal approach.
+* **3D_reconstruction_video.ipynb**: This notebook makes the 3D reconstruction of the points using the method we considered the best, displaying it into the screen. The velocity of the frames shown is not the real one.
 
-* **analysis**: Here there are different notebooks for analysing the results obtained during training. 'Create UTK Results Table.ipynb' creates the tables containing all performance metrics in each task and for each configuration. 'Create Dyadic Results Table.ipynb' does the same but for the dyadic dataset. CreateDataset.ipynb generates the dyadic dataset from the raw videos and ClassActivationMap.ipynb allows to visualize CAM's from images of the UTKFace dataset. Finally 'Analyse Results Table.ipynb' and 'Analyse Results Table-Dyadic.ipynb' generate the figures shown in the Results section from the results table.
+* **Three_cameras_experiments_1.ipynb and Three_cameras_experiments_2.ipynb**: This notebook presents the 3D reconstruction of the body and hand pose for the three views setting. The first notebook is for the person 1 (left in the HC view) and the second notebook for person 2 (right in the HC view). You have to comment and uncomment, or run the appropiate cells in order to obtain the results presented in the thesis.
+
+* **Four_cameras_experiments_1.ipynb and Four_cameras_experiments_2.ipynb**: Same as the previous notebooks, but present the case when four cameras are available for each person.
+
+
 
 
 
