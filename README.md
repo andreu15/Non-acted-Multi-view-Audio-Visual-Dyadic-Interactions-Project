@@ -28,9 +28,12 @@ Study of the state-of-the-art of the emotion recognition problem using audiovisu
 Study of the state-of-the-art of the **emotion recognition** problem using audiovisual sources and the different techniques that make use or not about the context, temporal information, memory blocks, etc. Deliver a emotion recognition system using Deep Learning techniques based on unimodal handcraft audio features, raw audio features and faces, and their possible fusion. Also study the influence of the temporal information to model the changes across frames in the emotion recognition problem in the unimodal and fusion experiments using **RNNs**. Help and participate during the recordings of the different sessions of the **Face-to-face Dyadic Interaction Dataset** placing and collecting the setup and attending the participants. Also annotate this database labeling the utterances of the videos.
 
 ## Aleix Casellas Comas
-### Master thesis name
+### Human Pose Recovery in Multi-view Dyadic Interactions
 
-Contributions
+Human Pose estimation is an important field in Computer Vision that has beenextensively studied for the past few years.  It is a crucial steps towards understand-ing  people  in  image  and  videos.   Recently,  3D  pose  estimation  has  become  morepopular since its applicability in Virtual Reality, Augmented reality, etc.  There aredifferent two different approaches to obtain it: obtain first the 2D keypoints and thenlift it to 3D, or directly predit the 3D pose. The first ones are more common, and weare using this approach in the project.  We are computing the 3D human pose in amultiview setting, specifically made by 6 cameras. We first get the 2D body and handpose estimation using a state-of-the-art method (OpenPose) and then project themto 3D using multiple view geometry. To do so, we first introduce in a clear way someimportant concepts about multiple view geometry, which are key to understand allthe procedure in the 3D reconstruction.
+
+My contribution in the project is double.  On one hand, I have been doing themulti-view joint optimization of hand and body skeleton poses for enhanced handand body pose recovery, using OpenPose and multiple view geometry. On the otherhand,  I  have  helped  and  participated  in  the  recordings  of  the  differents  sessionsof the Face-to-face Dyadic Interaction dataset.   This means placing and collectingthe setup, attending the participants and the explaining them the experiment, beingfilmed several times and annotating the facial expressions of the database.
+
 
 ## Andreu Masdeu Ninot
 ### Multitask Learning for Facial Attributes Analysis
