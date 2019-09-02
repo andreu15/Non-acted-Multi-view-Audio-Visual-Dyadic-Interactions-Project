@@ -37,4 +37,4 @@ The repository is organized in the following way:
 
 * GitHub: [polazaro](https://github.com/polazaro/MasterThesis)
 * DockerHub: [DockerfilePyTorch](https://hub.docker.com/r/rubenbt/tfm_torch) / [DockerfileKerasTensorflow](https://hub.docker.com/r/rubenbt/tfm_docker1)
-* LinkedIn: [PabloLázaroHerrasti](www.linkedin.com/in/plazh)
+* LinkedIn: [PabloLázaroHerrasti](http://www.linkedin.com/in/plazh)
