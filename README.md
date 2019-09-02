@@ -7,8 +7,6 @@ This repository contains all code generated during the development of the master
 
 Study of the state-of-the-art of the emotion recognition problem using audiovisual sources. Deliver a emotion recognition system using Deep Learning techniques based on unimodal audio features, raw audio and faces, and their possible fusion. On the other hand, study of state-of-the-art of the speaker segmentation problem using audio sources and unsupervised learning techniques such as **Spectral Clustering**. Help and participate during the recordings of the different sessions of the **Face-to-face Dyadic Interaction Dataset}** placing and collecting the setup and attending the participants. Also annotate this database labeling the utterances of the videos.
 
-Contributions
-
 ## Rubén Barco Terrones
 ### Multi-modal Local and Recurrent Non-verbal Emotion Recognition in Dyadic Scenarios
 
