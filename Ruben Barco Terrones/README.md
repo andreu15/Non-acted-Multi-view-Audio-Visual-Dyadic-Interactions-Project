@@ -32,6 +32,6 @@ The repository is organized in the following way:
 
 # Contact
 
-* GitHub: [rubenbarco](https://github.com/rubenbarco/MasterThesis)
+* GitHub: [rubenbarco](https://github.com/rubenbarco)
 * DockerHub: [PyTorch](https://hub.docker.com/r/rubenbt/tfm_torch) / [KerasTensorflow](https://hub.docker.com/r/rubenbt/tfm_docker1)
-* LinkedIn: [RubenBarco](https://www.linkedin.com/in/rub%C3%A9n-barco-terrones-5bb624161/)
+* LinkedIn: [Rubén Barco](https://www.linkedin.com/in/rub%C3%A9n-barco-terrones-5bb624161/)
