@@ -11,27 +11,27 @@ A large number of experiments with audio and video are performed to create the e
 
 ### Repository Explanation
 
-All the scripts are coded in Python and tested and debugged using Spyder (Anaconda). The paths inside the codes vary between the perosnal paths of my computer and the paths of the server provides by **HuPBA** (Human Pose Recovery and Behavior Analysis). Normally, all the training and preprocessing files should have the paths from the server because they are computationally expensive. 
+All the scripts are coded in Python and tested and debugged using Spyder (Anaconda). The paths inside the codes vary between the personal paths of my computer and the paths of the server provided by **HuPBA** (Human Pose Recovery and Behavior Analysis). Normally, all the training and preprocessing files should have the paths from the server because they are computationally expensive. 
 
 The repository is organized in the following way: 
 
 * **Dockerfiles**: the two dockerfiles coded for runing the experiments on the server:
   * The first Dockerfile contains the needed libraries for running the experiments with *Keras* over *Tensorflow* with gpu. We had to add also the *vgg* library and the libraries to load the files (*Pandas*, *Scipy*, *Pillow*)
   * The second Dockerfile contains the libraries for the face alignment process. It contains the corresponding lines to install *OpenCV* and *PyTorch*.
-* **Preprocessing**: all the scripts coded for organizing the IEMOCAP database, for the preprocessing of audio, handcraft features and video and for creating all the .txt, .csv and dictionaries for the training process. There are some common files used for all the database in general. This forlder is subdivided in three folders:
+* **Preprocessing**: all the scripts coded for organizing the IEMOCAP database, for the preprocessing of audio, handcraft features and video and for creating all the .txt, .csv and dictionaries for the training process. There are some common files used for all the database in general. This folder is subdivided in three folders:
   * **Audio Features**: preprocessing files for the handcraft audio fetures. 
   * **Raw Audio**: preprocessing files for the rau audio segments of 66-100ms.
   * **Video**: preprocessing files for the obtention of the cropped and alligned faces from the videos.
-* **Emotion Recognition**: all the training scripts for the Emotion Recognition system used in the master thesis. This forder is subdivided in two subfolders: **Local-Utterance Level** for the frame level analysis and **RNNs** for the analysis with temporal information. Both folders are again subdivided in 4 subfolders: **Audio Features**, **Fusion** (with all the codes for the bimoadl and trimodal fusion), **Raw Audio** and **Video**. All these strategies follow the same organization of files:
+* **Emotion Recognition**: all the training scripts for the Emotion Recognition system used in the master thesis. This folder is subdivided in two subfolders: **Local-Utterance Level** for the frame level analysis and **RNNs** for the analysis with temporal information. Both folders are again subdivided in 4 subfolders: **Audio Features**, **Fusion** (with all the codes for the bimodal and trimodal fusion), **Raw Audio** and **Video**. All these strategies follow the same organization of files:
   * A file coded with the generator and all the needed lines for training the models (i.e. `model_name.py`).
   * A similar file to obtain the evaluation of the best model for the training, vaidation and test sets (i.e. `model_name_prediction.py`).
   * Another file to evaluate the best model at utterance level (i.e. `model_name_prediction_utt.py`).
   * One last file to obtain the performance of the best model at utterance level and for each label (i.e. `model_name_prediction_utt_label.py`).
- In some cases there is also a script to compute the Proof of Concept with the video of the **Face-to-face Dyadic Interaction Dataset**. This files follow the name `model_name_prediction_utt_proof_concept.py`
+ In some cases there is also a script to compute the Proof of Concept with the video of the **Face-to-face Dyadic Interaction Dataset**. These files follow the name `model_name_prediction_utt_proof_concept.py`
 
 
 # Contact
 
-* GitHub: [rubenbarco](https://github.com/rubenbarco)
-* DockerHub: [PyTorch](https://hub.docker.com/r/rubenbt/tfm_torch) / [KerasTensorflow](https://hub.docker.com/r/rubenbt/tfm_docker1)
-* LinkedIn: [Rubén Barco](https://www.linkedin.com/in/rub%C3%A9n-barco-terrones-5bb624161/)
+* GitHub: [rubenbarco](https://github.com/rubenbarco/MasterThesis)
+* DockerHub: [DockerfilePyTorch](https://hub.docker.com/r/rubenbt/tfm_torch) / [DockerfileKerasTensorflow](https://hub.docker.com/r/rubenbt/tfm_docker1)
+* LinkedIn: [RubenBarco](https://www.linkedin.com/in/rub%C3%A9n-barco-terrones-5bb624161/)
