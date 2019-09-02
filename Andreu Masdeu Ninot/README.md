@@ -1,40 +1,27 @@
-# Multi-modal Local Non-verbal Emotion Recognition in Dyadic scenarios and Speaker Segmentation
+# Multitask Learning For Facial Attributes Analysis
 
-This folder contains the repository of the master thesis of **Pablo Lázaro Herrasti** in relation with the **Non-acted Multi-view Audio-Visual Dyadic Interactions Project**.
+This folder contains the repository of the master thesis of **Andreu Masdeu Ninot** in relation with the **Non-acted Multi-view Audio-Visual Dyadic Interactions Project**.
 
 ### Description of the Master Thesis
-This Master Thesis is focused on the development of baseline **Emotion Recognition System** in a dyadic environment using raw and handcraft audio features and cropped faces from the videos. This system is analyzed at frame and utterance level without temporal information. As well, a baseline **Speaker Segmentation** system has been developed to facilitate the annotation task. For this reason, an exhaustive study of the state-of-the-art on emotion recognition and speaker segmentation techniques has been conducted, paying particular attention on Deep Learning techniques for emotion recognition and clustering for speaker segmentation.
 
-While studying the state-of-the-art from the theoretical point of view, a dataset consisting of videos of sessions of dyadic interactions between individuals in different scenarios has been recorded. Different attributes were captured and labelled from these videos: body pose, hand pose, emotion, age, gender, etc. Once the architectures for emotion recognition have been trained with other dataset, a proof of concept is done with this new database in order to extract conclusions. In addition, this database can help future systems to achieve better results.
-
-A large number of experiments with audio and video are performed to create the emotion recognition system. The **IEMOCAP database** is used to perform the training and evaluation experiments of the emotion recognition system. Once the audio and video are trained separately with two different architectures, a fusion of both methods is done. In this work, the importance of preprocessing data (i.e. face detection, windows analysis length, handcrafted features, etc.) and choosing the correct parameters for the architectures (i.e. network depth, fusion, etc.) has been demonstrated and studied.
-
-On the other hand, the experiments for the speaker segmentation system are performed with a piece of audio from IEMOCAP database. In this work, the prerprocessing steps, the problems of an unsupervised system such as clustering and the feature representation are studied and discussed.
+In this thesis we explore the use of Multitask Learning for improving performance in facial attributes tasks such as gender, age and ethnicity prediction. These tasks, along with emotion recognition will be part of a new dyadic interaction dataset which was recorded during the development of this thesis. This work includes the implementation of two state of the art multitask deep learning models and the discussion of the results obtained from these methods in a preliminary dataset, as well as a first evaluation in a sample of the dyadic interaction dataset. This will serve as a baseline for a future implementation of Multitask Learning methods in the fully annotated dyadic interaction dataset.
  
 
 ### Repository Explanation
 
-All the scripts are coded in Python and tested and debugged using Spyder (Anaconda). The paths inside the codes vary between the personal paths of the local computer and the paths of the server provided by **HuPBA** (Human Pose Recovery and Behavior Analysis). Normally, all the training and preprocessing files should have the paths from the server because they are computationally expensive. 
+Codes for implementation and training of models are Python scripts. For analysing results jupyter notebook were created instead.
 
-The repository is organized in the following way: 
+The repository is organized in the following way, in three folders: 
 
-* **Dockerfiles**: the two dockerfiles coded for runing the experiments on the server:
-  * The first Dockerfile contains the needed libraries for running the experiments with *Keras* over *Tensorflow* with gpu. We had to add also the *vgg* library and the libraries to load the files (*Pandas*, *Scipy*, *Pillow*)
-  * The second Dockerfile contains the libraries for the face alignment process. It contains the corresponding lines to install *OpenCV* and *PyTorch*.
-* **Preprocessing**: all the scripts coded for organizing the IEMOCAP database, for the preprocessing of audio, handcraft features and video and for creating all the .txt, .csv and dictionaries for the training process. There are some common files used for all the database in general. This folder is subdivided in three folders:
-  * **Audio Features**: preprocessing files for the handcraft audio fetures. 
-  * **Raw Audio**: preprocessing files for the rau audio segments of 66-100ms.
-  * **Video**: preprocessing files for the obtention of the cropped and alligned faces from the videos.
-* **Emotion Recognition**: all the training scripts for the Emotion Recognition system used in the master thesis. This folder is has another folder named **Local-Utterance Level** for the frame level analysis. Both folders are again subdivided in 4 subfolders: **Audio Features**, **Fusion** (with all the codes for the bimodal and trimodal fusion), **Raw Audio** and **Video**. All these strategies follow the same organization of files:
-  * A file coded with the generator and all the needed lines for training the models (i.e. `model_name.py`).
-  * A similar file to obtain the evaluation of the best model for the training, vaidation and test sets (i.e. `model_name_prediction.py`).
-  * Another file to evaluate the best model at utterance level (i.e. `model_name_prediction_utt.py`).
-  * One last file to obtain the performance of the best model at utterance level and for each label (i.e. `model_name_prediction_utt_label.py`).
- In some cases there is also a script to compute the Proof of Concept with the video of the **Face-to-face Dyadic Interaction Dataset**. These files follow the name `model_name_prediction_utt_proof_concept.py`
+* **implementations**: Here you can find the implementations for building the Hard Parameter Sharing Models and for building the Cross-stitch Networks. To build a Cross-stitch Network a custom Keras layer for the cross-stitch operation is necessary and is implemented in a class called ProportionalAddition inside the leaky_unit.py file. This file is named after another multitask learning unit named leaky_unit who was finally not included in the thesis.
+
+* **train**: Here are all scripts coded to train all possible configurations of the MTL models. The Baseline Model is trained in the Cross-stitch networks scripts. There are 16 files, since each file contains a different grouping of the tasks (4 different groupings: 3 pairs and the triplet) and also each file is doubled for the backwards and normal approach.
+
+  * **analysis**: Here there are different notebooks for analysing the results obtained during training. 'Create UTK Results Table.ipynb' creates the tables containing all performance metrics in each task and for each configuration. 'Create Dyadic Results Table.ipynb' does the same but for the dyadic dataset. CreateDataset.ipynb generates the dyadic dataset from the raw videos and ClassActivationMap.ipynb allows to visualize CAM's from images of the UTKFace dataset. Finally 'Analyse Results Table.ipynb' and 'Analyse Results Table-Dyadic.ipynb' generate the figures shown in the Results section from the results table.
+
 
 
 # Contact
 
-* GitHub: [polazaro](https://github.com/polazaro/MasterThesis)
-* DockerHub: [DockerfilePyTorch](https://hub.docker.com/r/rubenbt/tfm_torch) / [DockerfileKerasTensorflow](https://hub.docker.com/r/rubenbt/tfm_docker1)
-* LinkedIn: [PabloLázaroHerrasti](http://www.linkedin.com/in/plazh)
+* GitHub: [andreu15](https://github.com/andreu15)
+* LinkedIn: [Andreu Masdeu Ninot](https://es.linkedin.com/in/andreu-masdeu-ninot-23139714a)
