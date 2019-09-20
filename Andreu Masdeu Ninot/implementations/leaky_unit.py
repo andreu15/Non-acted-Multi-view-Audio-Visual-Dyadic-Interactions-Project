@@ -25,7 +25,7 @@ class ProportionalAddition(Layer):
         batch_size, H, T, F = input_shape[0]
         self.alpha = self.add_weight(name='alpha',
                                      shape=(self.n_tasks, self.n_tasks), 
-                                     initializer='normal',  # Try also 'ones' and 'uniform'
+                                     initializer='uniform',  # Try also 'ones' and 'uniform'
                                      trainable=True)
         super(ProportionalAddition, self).build(input_shape)
 
